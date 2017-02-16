@@ -1,0 +1,240 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/edit_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <RelativeLayout
+        android:id="@+id/task_name_edit_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/listly_edit_height"
+        android:layout_below="@id/edit_toolbar">
+
+        <TextView
+            android:id="@+id/task_name_edit_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/listly_edit_margin"
+            android:text="@string/edit_task_name"
+            android:textSize="@dimen/listly_eidt_snippet"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/task_name_edit_edit"
+            android:layout_width="@dimen/listly_edit_width"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/listly_edit_margin"
+            android:hint="@string/edit_task_name_hint"
+            android:inputType="textUri"
+            android:textSize="@dimen/listly_eidt_snippet"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/task_name_edit_divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/listly_divider_height"
+        android:layout_below="@id/task_name_edit_layout"
+        android:layout_marginLeft="@dimen/listly_edit_margin"
+        android:layout_marginRight="@dimen/listly_edit_margin"
+        android:background="@android:color/black" />
+
+    <RelativeLayout
+        android:id="@+id/task_date_edit_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/task_name_edit_divider">
+
+        <TextView
+            android:id="@+id/date_edit_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/listly_edit_margin"
+            android:text="@string/edit_date"
+            android:textSize="@dimen/listly_eidt_snippet"
+            android:textStyle="bold" />
+
+        <DatePicker
+            android:id="@+id/date_edit_date_picker"
+            android:layout_width="@dimen/listly_edit_width"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/listly_edit_margin"
+            android:calendarViewShown="false"
+            android:datePickerMode="spinner" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/task_date_edit_divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/listly_divider_height"
+        android:layout_below="@id/task_date_edit_layout"
+        android:layout_marginLeft="@dimen/listly_edit_margin"
+        android:layout_marginRight="@dimen/listly_edit_margin"
+        android:background="@android:color/black" />
+
+    <RelativeLayout
+        android:id="@+id/task_note_edit_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/listly_edit_height"
+        android:layout_below="@id/task_date_edit_divider">
+
+        <TextView
+            android:id="@+id/task_note_edit_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/listly_edit_margin"
+            android:text="@string/edit_task_note"
+            android:textSize="@dimen/listly_eidt_snippet"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/task_note_edit_edit"
+            android:layout_width="@dimen/listly_edit_width"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/listly_edit_margin"
+            android:hint="@string/edit_task_note_hint"
+            android:inputType="textUri"
+            android:textSize="@dimen/listly_eidt_snippet"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/task_note_edit_divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/listly_divider_height"
+        android:layout_below="@id/task_note_edit_layout"
+        android:layout_marginLeft="@dimen/listly_edit_margin"
+        android:layout_marginRight="@dimen/listly_edit_margin"
+        android:background="@android:color/black" />
+
+    <RelativeLayout
+        android:id="@+id/task_priority_edit_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/listly_edit_height"
+        android:layout_below="@id/task_note_edit_divider">
+
+        <TextView
+            android:id="@+id/priority_edit_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/listly_edit_margin"
+            android:text="@string/edit_priority"
+            android:textSize="@dimen/listly_eidt_snippet"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/priority_edit_spinner"
+            android:layout_width="@dimen/listly_edit_width"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/listly_edit_margin"
+            android:textSize="@dimen/listly_eidt_snippet"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/task_priority_edit_divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/listly_divider_height"
+        android:layout_below="@id/task_priority_edit_layout"
+        android:layout_marginLeft="@dimen/listly_edit_margin"
+        android:layout_marginRight="@dimen/listly_edit_margin"
+        android:background="@android:color/black" />
+
+    <RelativeLayout
+        android:id="@+id/task_status_edit_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/listly_edit_height"
+        android:layout_below="@id/task_priority_edit_divider">
+
+        <TextView
+            android:id="@+id/status_edit_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/listly_edit_margin"
+            android:text="@string/edit_status"
+            android:textSize="@dimen/listly_eidt_snippet"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/status_edit_spinner"
+            android:layout_width="@dimen/listly_edit_width"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/listly_edit_margin"
+            android:textSize="@dimen/listly_eidt_snippet"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/task_status_edit_divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/listly_divider_height"
+        android:layout_below="@id/task_status_edit_layout"
+        android:layout_marginLeft="@dimen/listly_edit_margin"
+        android:layout_marginRight="@dimen/listly_edit_margin"
+        android:background="@android:color/black" />
+
+    <RelativeLayout
+        android:id="@+id/task_picture_edit_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/listly_edit_height"
+        android:layout_below="@id/task_status_edit_divider">
+
+        <TextView
+            android:id="@+id/picture_edit_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/listly_edit_margin"
+            android:text="@string/edit_picture"
+            android:textSize="@dimen/listly_eidt_snippet"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/picture_edit_image"
+            android:layout_width="@dimen/listly_edit_height"
+            android:layout_height="@dimen/listly_edit_height"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/listly_image_margin"
+            android:layout_marginRight="@dimen/listly_edit_margin"
+            android:layout_marginTop="@dimen/listly_image_margin"
+            android:src="@drawable/ic_task" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/task_picture_edit_divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/listly_divider_height"
+        android:layout_below="@id/task_picture_edit_layout"
+        android:layout_marginLeft="@dimen/listly_edit_margin"
+        android:layout_marginRight="@dimen/listly_edit_margin"
+        android:background="@android:color/black" />
+
+</RelativeLayout>

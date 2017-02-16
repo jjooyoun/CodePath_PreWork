@@ -1,0 +1,18 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="listly_divider_height">2dp</dimen>
+    <dimen name="listly_list_height">65dp</dimen>
+    <dimen name="listly_list_divider">2dp</dimen>
+    <dimen name="listly_image_margin">2dp</dimen>
+    <dimen name="listly_list_margin">10dp</dimen>
+    <dimen name="listly_list_snippet">20dp</dimen>
+    <dimen name="listly_menu_snippet">20dp</dimen>
+    <dimen name="listly_post_margin">10dp</dimen>
+    <dimen name="listly_edit_height">65dp</dimen>
+    <dimen name="listly_edit_margin">10dp</dimen>
+    <dimen name="listly_eidt_snippet">20dp</dimen>
+    <dimen name="listly_edit_width">220dp</dimen>
+
+</resources>

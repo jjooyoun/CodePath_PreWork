@@ -1,0 +1,50 @@
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/listly_list_height"
+    card_view:cardCornerRadius="@dimen/cardview_default_radius"
+    card_view:cardElevation="@dimen/cardview_default_elevation"
+    card_view:cardPreventCornerOverlap="false"
+    card_view:cardUseCompatPadding="true"
+    card_view:contentPaddingBottom="@dimen/listly_list_divider"
+    card_view:contentPaddingTop="@dimen/listly_list_divider">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <ImageView
+            android:id="@+id/task_image"
+            android:layout_width="@dimen/listly_list_height"
+            android:layout_height="@dimen/listly_list_height"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/listly_list_margin"
+            android:layout_marginRight="@dimen/listly_list_margin" />
+
+        <TextView
+            android:id="@+id/task_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/listly_list_margin"
+            android:layout_toRightOf="@id/task_image"
+            android:maxLines="1"
+            android:textSize="@dimen/listly_list_snippet"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/task_prioirty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/listly_list_margin"
+            android:layout_marginRight="@dimen/listly_list_margin"
+            android:maxLines="1"
+            android:textSize="@dimen/listly_list_snippet"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
